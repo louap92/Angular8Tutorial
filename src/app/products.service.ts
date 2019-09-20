@@ -20,4 +20,9 @@ export class ProductsService {
     this.http.post(`${this.uri}/add`, obj)
         .subscribe(res => console.log('Done'));
   }
+  getProducts() {
+    return this
+           .http
+           .get(`${this.uri}`);
+  }
 }
